@@ -5,6 +5,10 @@ pipeline {
         // Specify the JDK name configured in Jenkins
         jdk 'JAVA_HOME'
     }
+
+    withEnv(["PATH+JDK=${tool 'JAVA_HOME'}/bin"]) {
+    // Your compilation and execution steps here
+}
     
     stages {
         stage('Checkout') {
