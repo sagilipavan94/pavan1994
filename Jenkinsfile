@@ -1,6 +1,11 @@
 pipeline {
     
     agent any 
+
+     tools {
+        // Specify the JDK name configured in Jenkins
+        jdk 'JAVA_HOME'
+    }
     
     stages {
         
