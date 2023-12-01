@@ -16,7 +16,7 @@ pipeline {
         stage('Build and Run Java'){
             steps{
                 script{
-			def jdkHome = tool 'javaproj'
+			def jdkHome = tool 'JAVA_HOME'
                         sh "${jdkHome}/bin/javac HelloWorld.java"
                         sh "${jdkHome}/bin/java HelloWorld"
                 }
